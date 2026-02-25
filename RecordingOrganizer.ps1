@@ -15,7 +15,7 @@ function Move-ToDateFolder {
 
     if ((Get-Item $filePath -ErrorAction SilentlyContinue) -is [System.IO.DirectoryInfo]) { return }
 
-    Start-Sleep -Seconds 3
+    Start-Sleep -Seconds 1
 
     $date       = Get-Date -Format "yyyy-MM-dd"
     $dateFolder = Join-Path "Z:\$env:COMPUTERNAME" $date
